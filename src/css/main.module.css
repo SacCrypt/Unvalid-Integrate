@@ -1,0 +1,350 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    gap: 2em;
+    align-items:baseline;
+    
+}
+
+.sidebar{
+    height: 100%;
+    background-color: #FF8513;
+    
+}
+
+.innerFlex{
+    display: flex;
+    align-items:flex-start;
+    padding-top: 50%;
+    gap: .5em;
+    width: 12em;
+}
+
+.infoFlex, .iconFlex{
+    display: flex;
+    flex-direction: column;
+    gap: 1.9em;
+}
+
+.iconFlex{
+    gap: 2.3em;
+    margin-left: .5em;
+}
+
+.infoFlex p{
+    font-size: .8em;
+    color: white;
+}
+
+.yearsContent{
+    display: flex;
+    gap: 1.05em;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.yearsContent div{
+    width: 8.25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.yearsContent p{
+    font-size: .8em;
+}
+
+.yearsContent h2{
+    letter-spacing: .1em;
+}
+
+.zero{
+    border: 3px solid red;
+}
+
+.one{
+    border: 3px solid yellow;
+}
+
+.two{
+    border: 3px solid orange;
+}
+
+.three{
+    border: 3px solid green;
+}
+
+.four{
+    border: 3px solid blue;
+}
+
+.five{
+    border: 2px solid purple;
+}
+
+.options{
+    display:flex;
+    align-items: center;
+    margin-top: 4em;
+    max-width: 65em;
+}
+
+.dropDown {
+    width: 10em;
+    padding: 5px;
+    border-color: white;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.openEye {
+    padding: 10px;
+    width: 14em;
+    margin-left: auto;
+    display: flex;
+    gap: 10%;
+    background-color: white;
+    outline: black;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.openEye::before{
+    content: "";
+    background-image: url("../images/eye.png");
+    background-size:cover;
+    align-items: center;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.closedEye{
+    padding: 10px;
+    width: 14em;
+    margin-left: auto;
+    display: flex;
+    gap: 10%;
+    background-color: orange;
+    color: white;
+    align-items: center;
+    outline: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.closedEye::before{
+    content: "";
+    background-image: url("../images/hidden.png");
+    background-size: cover;
+    align-items: center;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.selectAll{
+    margin: 0 .5em;
+    padding: 10px;
+    width: 14em;
+    display: flex;
+    gap: 25%;
+    background-color: white;
+    outline: black;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+.selectAll::before{
+    content: "";
+    background-image: url("../images/checkall.png");
+    background-size: cover;
+    width: 1.5em;
+    height: 1.5em;
+    align-items: center;
+}
+
+.totalFlex{
+    display: flex;
+    justify-content: flex-end;
+    margin: 1em 1.5em;
+}
+
+.total{
+    background-color: #FF8513;
+    border: 2px solid black;
+    padding: 5px;
+    width: 15%;
+    text-align: center;
+}
+
+.famous{
+    margin-top: 4em;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.firstFamous {
+    font-weight: bolder;
+    font-size: large;
+    cursor: pointer;
+}
+
+.firstFamous ~ p{
+    font-size: large;
+    color: gray;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.firstFamous ~ div{
+    height: 2em;
+    border-right-style: solid;
+    border-right-width: .2em;
+    border-right-color: gray;
+}
+
+.book{
+    background-color: lightgray;
+    width: 12em;
+    height: 17em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap:1em;
+}
+
+.bookList{
+    margin-top: 2em;
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.bookImage{
+    margin-top: 2em;
+    width: 10em;
+    height: 10em;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    
+}
+
+.number{
+    padding: 5px;
+    border: 2px solid white;
+    background-color: white;
+}
+
+.selected{
+    height: 17em;
+    width: 12em;
+    background-color: black;
+    background-image: url("../images/greentick.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    position: absolute;
+    z-index: 1;
+}
+
+.modal{
+    border:2px solid orange;
+    padding: 10px;
+    width: 40%;
+    height: 30em;
+    left: 30%;
+    top: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;   
+}
+
+dialog::backdrop{
+    backdrop-filter: blur(2px);
+}
+
+.modalFlex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.isbnHolder{
+    margin-top: 2em;
+    
+    padding: 5px;
+}
+
+.addButton{
+    width: 80%;
+    background-color: #FF8513;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.skipButton {
+    width: 80%;
+    background-color: white;
+    color: #FF8513;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.noDiv{
+    margin-top: 1em;
+    width: 22em;
+    word-wrap:break-word;
+    font-size: 14px;
+    background-color: lightgray;
+    padding: 10px;
+}
+
+.dbFetch{
+    margin-top: 1em;
+    border:2px solid black;
+    padding: 10px;
+    background-color: red;
+    color: white;
+}
+
+@media (max-width:800px){
+    .yearsContent{
+        flex-wrap: wrap;
+    }
+
+    .yearsContent div {
+        width: 4.5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+    }
+
+    .yearsContent p {
+        font-size: .3em;
+    }
+
+    .yearsContent h2 {
+        font-size: .8em;
+        letter-spacing: .1em;
+    }
+}
